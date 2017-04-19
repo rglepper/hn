@@ -1,3 +1,14 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container-fluid">
+  <h1>
+    {{title}}
+  </h1>
+
+  <div class="main-content">
+    <ul class="list-group">
+      <li *ngFor="let item of feed | slice:0:30" class="list-group-item">
+        <app-item itemID="{{item}}"></app-item>
+      </li>
+    </ul>
+  <!-- ... -->
+</div>
+</div>
